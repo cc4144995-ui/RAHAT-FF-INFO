@@ -20,7 +20,7 @@ MAIN_KEY = base64.b64decode('WWcmdGMlREV1aDYlWmNeOA==')
 MAIN_IV = base64.b64decode('Nm95WkRyMjJFM3ljaGpNJQ==')
 RELEASEVERSION = "OB52"
 USERAGENT = "Dalvik/2.1.0 (Linux; U; Android 13; CPH2095 Build/RKQ1.211119.001)"
-SUPPORTED_REGIONS = {"IND", "BR", "US", "SAC", "NA", "SG", "RU", "ID", "TW", "VN", "TH", "ME", "PK", "CIS", "BD", "EUROPE"}
+SUPPORTED_REGIONS = {"BD", "BR", "US", "SAC", "NA", "SG", "RU", "ID", "TW", "VN", "TH", "ME", "PK", "CIS", "BD", "EUROPE"}
 
 # === Flask App Setup ===
 
@@ -51,12 +51,12 @@ async def json_to_proto(json_data: str, proto_message: Message) -> bytes:
 
 def get_account_credentials(region: str) -> str:
     r = region.upper()
-    if r == "IND":
-        return "uid=3933356115&password=CA6DDAEE7F32A95D6BC17B15B8D5C59E091338B4609F25A1728720E8E4C107C4"
+    if r == "BD":
+        return "uid=4222295836&password=0381935BAA1998BDB4B18E193DBFECCC0836A6FA9960CF3C1C6C0CBC8F83D3D9"
     elif r in {"BR", "US", "SAC", "NA"}:
-        return "uid=4044223479&password=EB067625F1E2CB705C7561747A46D502480DC5D41497F4C90F3FDBC73B8082ED"
+        return "uid=4222295836&password=0381935BAA1998BDB4B18E193DBFECCC0836A6FA9960CF3C1C6C0CBC8F83D3D9"
     else:
-        return "uid=4108414251&password=E4F9C33BBEB23C0DA0AD7E60F63C8A05D6A878798E3CD32C4E2314C1EEFD4F72"
+        return "uid=4222295836&password=0381935BAA1998BDB4B18E193DBFECCC0836A6FA9960CF3C1C6C0CBC8F83D3D9"
 
 # === Token Generation ===
 
